@@ -2,7 +2,7 @@ import { Component, OnInit, trigger, transition, style, animate } from '@angular
 import * as moment from 'moment';
 @Component({
   selector: 'app-material-picker',
-   animations: [
+  animations: [
     trigger(
       'enterAnimationVetically', [
         transition(':enter', [
@@ -34,10 +34,10 @@ export class MaterialPickerComponent implements OnInit {
   }
 
   calculateDate() {
-    const start = moment(this._start).format();
-    const end = moment(this._end).format();
+    const start = this._start;
+    const end = this._end;
 
-    if (start !== 'Invalid date' && end !== 'Invalid date') {
+    if (start !== undefined && end !== undefined) {
       this.showAlertDanger = false;
       this.duration = moment(end).diff(start, 'days');
       this.showResult = true;
