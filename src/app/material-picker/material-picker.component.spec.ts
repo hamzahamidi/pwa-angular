@@ -15,7 +15,7 @@ describe('MaterialPickerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MaterialPickerComponent, DurationCardComponent ],
-      imports: [MdDatepickerModule, MdNativeDateModule, MdInputModule, MdCardModule, FormsModule,BrowserAnimationsModule]
+      imports: [MdDatepickerModule, MdNativeDateModule, MdInputModule, MdCardModule, FormsModule, BrowserAnimationsModule]
     })
     .compileComponents();
   }));
