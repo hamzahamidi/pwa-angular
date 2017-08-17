@@ -1,0 +1,31 @@
+<div class="container" [@enterAnimation]>
+    <div>
+        <h1>Calculer la durée entre deux dates</h1>
+    </div>
+    <div class="form-group">
+        <label [ngClass]="{'text-danger': showAlertDanger}">Date début:</label>
+        <div class="input-group" [ngClass]="{'has-danger': false}">
+            <input id="start" type="text" class="form-control" [ngClass]="{'form-control-danger': showAlertDanger}" [(ngModel)]="_start" placeholder="clicker pour séléctionner date">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-time" (click)="selectStartTime()" ></i></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label [ngClass]="{'text-danger': showAlertDanger}">Date Fin:</label>
+        <div class="input-group">
+            <input id="end" type="text" class="form-control" [ngClass]="{'has-danger': showAlertDanger}" [(ngModel)]="_end" placeholder="clicker pour séléctionner date">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-time" (click)="selectEndTime()"></i></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-md" (click)="calculateDate()">Calculer</button>
+    </div>
+    <div *ngIf="showAlertWarning" class="alert alert-warning">
+        <strong>Attention!</strong> La date de début était après la date de fin. Alors les champs Début et Fin ont été échangés
+    </div>
+    <div *ngIf="showAlertDanger" class="alert alert-danger">
+        <strong>Dates Invalides!</strong> Veuillez remplir les champs indiqués.
+    </div>
+    <div *ngIf="showResult">
+        <app-duration-card [duration]="duration"></app-duration-card>
+    </div>
+</div>
