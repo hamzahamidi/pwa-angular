@@ -19,11 +19,11 @@
         "prefix": "app",
         "styles": [
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-            "../node_modules/md-datepicker/dist/css/mdDateTimePicker.css",
+            "../src/libraries/md-datepicker/dist/css/mdDateTimePicker.css",
             "../node_modules/font-awesome/css/font-awesome.min.css",
             "styles.css"
         ],
-        "scripts": ["../node_modules/md-datepicker/dist/js/mdDateTimePicker.js"],
+        "scripts": ["../src/libraries/md-datepicker/dist/js/mdDateTimePicker.js"],
         "environmentSource": "environments/environment.ts",
         "environments": {
             "dev": "environments/environment.ts",

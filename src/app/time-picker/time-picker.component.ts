@@ -1,6 +1,6 @@
 import { Component, OnInit, trigger, transition, style, animate } from '@angular/core';
 import * as moment from 'moment';
-const mdDateTimePicker = require('md-datepicker');
+const mdDateTimePicker = require('libraries/md-datepicker');
 
 @Component({
   selector: 'app-time-picker',
