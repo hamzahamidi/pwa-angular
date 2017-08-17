@@ -1,18 +1,61 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+// animation module
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Angular Material components
+import { MdCardModule, MdDatepickerModule, MdNativeDateModule, MdInputModule, DateAdapter } from '@angular/material';
+
+// hammerJs
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { TimePickerComponent } from './components/time-picker/time-picker.component';
+// components
+import { TimePickerComponent } from './time-picker/time-picker.component';
+import { MaterialPickerComponent } from './material-picker/material-picker.component';
+import { DurationCardComponent } from './components/duration-card/duration-card.component';
+// import date adapter for Frensh standard
+import { CustomDateAdapter } from './date-adapter/custom-date-picker';
+import { AboutComponent } from './about/about.component';
+
+
+const appRoutes: Routes = [
+  { path: 'time-picker', component: TimePickerComponent },
+  { path: 'material-picker', component: MaterialPickerComponent },
+  { path: 'about', component: AboutComponent },
+  {
+    path: '',
+    redirectTo: '/time-picker',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimePickerComponent
+    TimePickerComponent,
+    MaterialPickerComponent,
+    DurationCardComponent,
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule
+  imports: [RouterModule.forRoot(
+    appRoutes
+    // ,{ enableTracing: true } // <-- debugging purposes only
+  ),
+    FormsModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    MdCardModule,
+    MdDatepickerModule, MdNativeDateModule, MdInputModule
+
   ],
-  providers: [],
+  providers: [{ provide: DateAdapter, useClass: CustomDateAdapter }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private dateAdapter: DateAdapter<Date>) {
+    this.dateAdapter.setLocale('fr-br');
+  }
+}
