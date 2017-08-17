@@ -1,6 +1,11 @@
 # AngularSample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+
+Please note that this project uses Angular Material.Material is targeted for all browsers with browser versions shown below with green boxes:
+
+![ngm1_browser_support](https://cloud.githubusercontent.com/assets/210413/18553899/f3fbfbca-7b27-11e6-81c9-2937950c808e.png)
+
 ## How to start
 
 Download  the project.
