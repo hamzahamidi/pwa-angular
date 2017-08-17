@@ -37,7 +37,7 @@ export class MaterialPickerComponent implements OnInit {
     const start = this._start;
     const end = this._end;
 
-    if (start !== undefined && end !== undefined) {
+    if (start && end ) {
       this.showAlertDanger = false;
       this.duration = moment(end).diff(start, 'days');
       this.showResult = true;
