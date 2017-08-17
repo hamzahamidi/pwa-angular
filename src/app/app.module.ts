@@ -16,9 +16,9 @@ import { AppComponent } from './app.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
 import { MaterialPickerComponent } from './material-picker/material-picker.component';
 import { DurationCardComponent } from './components/duration-card/duration-card.component';
+import { AboutComponent } from './about/about.component';
 // import date adapter for Frensh standard
 import { CustomDateAdapter } from './date-adapter/custom-date-picker';
-import { AboutComponent } from './about/about.component';
 
 
 const appRoutes: Routes = [
@@ -47,8 +47,7 @@ const appRoutes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     BrowserModule,
-    MdCardModule,
-    MdDatepickerModule, MdNativeDateModule, MdInputModule
+    MdCardModule, MdDatepickerModule, MdNativeDateModule, MdInputModule
 
   ],
   providers: [{ provide: DateAdapter, useClass: CustomDateAdapter }],
