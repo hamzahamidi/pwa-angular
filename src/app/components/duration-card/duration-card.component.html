@@ -1,0 +1,30 @@
+<div class="flex-grid">
+    <div class="col">
+        <md-card>
+            <md-card-header>
+                <md-card-title><b>Resultat:</b></md-card-title>
+            </md-card-header>
+            <md-card-content>
+                <p>La durée est de <span class="text-info">{{day}}</span> jours,
+                </p>
+                <p>ou de <span class="text-info">{{year}}</span> années et <span class="text-info">{{restYear}} </span> jours
+                </p>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div class="col-third">
+        <md-card>
+            <md-card-header>
+                <md-card-title><b>Autres Valeurs:</b></md-card-title>
+            </md-card-header>
+            <md-card-content>
+                La durée peut être aussi convertie aux valeurs suivantes:
+                <ul>
+                    <li><span class="text-info">{{minutes}}</span> minutes</li>
+                    <li><span class="text-info">{{houres}}</span> heures</li>
+                    <li><span class="text-info">{{week}} </span> semaines et <span class="text-info">{{restWeek}}</span> jours</li>
+                </ul>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

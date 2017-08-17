@@ -1,0 +1,16 @@
+    .flex-grid {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .flex-grid .col {
+        width: 68%;
+    }
+    
+    .flex-grid .col-third {
+        width: 30%;
+    }
+    
+    .mat-card {
+        height: 100%;
+    }
