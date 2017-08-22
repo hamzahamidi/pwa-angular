@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 // import date adapter for Frensh standard
 import { CustomDateAdapter } from './date-adapter/custom-date-picker';
 import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const appRoutes: Routes = [
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'material-picker', component: MaterialPickerComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'registration', component: RegistrationComponent },
   {
     path: '',
     redirectTo: '/time-picker',
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
     DurationCardComponent,
     AboutComponent,
     LoginComponent,
+    RegistrationComponent,
   ],
   imports: [RouterModule.forRoot(
     appRoutes
