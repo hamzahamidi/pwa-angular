@@ -2,7 +2,7 @@
 
 This project is an Angular Sample using mutliple UX/UI libraries and respecting Material design.
 
-Please note that this project Is already in production mode.
+[DEMO](https://spring-angular-hion.cfapps.io/time-picker)
 
 Please note that this project uses Angular Material which is targeted for all browsers with browser versions shown below with green boxes:
 
