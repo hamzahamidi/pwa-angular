@@ -6,14 +6,14 @@ import { Component, Input, OnChanges, SimpleChange } from '@angular/core';
   styleUrls: ['./duration-card.component.css']
 })
 export class DurationCardComponent implements OnChanges {
-  @Input() duration;
+  @Input() duration: number;
   minutes: number;
   houres: number;
   restWeek: number;
   week: number;
-  day: any;
-  year: any;
-  restYear: any;
+  day: number;
+  year: number;
+  restYear: number;
   constructor() { }
 
   ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
