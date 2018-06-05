@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hamzahamidi/pwa-angular.svg?branch=master)](https://travis-ci.org/hamzahamidi/pwa-angular)
+
 # AngularSample
 
 This project is an Angular Sample using mutliple UX/UI libraries and respecting Material design.
