@@ -28,7 +28,7 @@
     "@angular/router": "4.3.6",
     "@types/node": "^6.0.86",
     "classlist.js": "^1.1.20150312",
-    "core-js": "^2.4.1",
+    "core-js": "^2.6.11",
     "custom-event-polyfill": "^0.3.0",
     "draggabilly": "^2.1.1",
     "font-awesome": "^4.7.0",
